@@ -1,0 +1,42 @@
+﻿@page
+@model Prepaid_Mobile_Topup_Core_Web_App.Pages.PrepaidCustomers.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Prepaid Customers</h1>
+
+<p>
+    <a class="btn btn-info" asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PrepaidCustomer[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrepaidCustomer[0].RegistereddDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.PrepaidCustomer) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RegistereddDate)
+            </td>
+            <td>
+                <a class="btn btn-info" asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a class="btn btn-info" asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a class="btn btn-info" asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

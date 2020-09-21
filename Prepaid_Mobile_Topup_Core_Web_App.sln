@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29509.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prepaid_Mobile_Topup_Core_Web_App", "Prepaid_Mobile_Topup_Core_Web_App.csproj", "{A827C813-E466-471C-858D-0849FE853E09}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A827C813-E466-471C-858D-0849FE853E09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A827C813-E466-471C-858D-0849FE853E09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A827C813-E466-471C-858D-0849FE853E09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A827C813-E466-471C-858D-0849FE853E09}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E440A6FC-A9AE-4C65-BDB4-736301D080A6}
+	EndGlobalSection
+EndGlobal

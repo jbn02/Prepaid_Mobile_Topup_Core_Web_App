@@ -1,0 +1,48 @@
+﻿@page
+@model Prepaid_Mobile_Topup_Core_Web_App.Pages.TopUps.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Top Ups </h1>
+
+<p>
+    <a class="btn btn-info" asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TopUp[0].MobileAccount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TopUp[0].TopUpChannel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TopUp[0].TopUpAmount)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.TopUp) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MobileAccount.Number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TopUpChannel.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TopUpAmount)
+            </td>
+            <td>
+                <a class="btn btn-info" asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a class="btn btn-info" asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a class="btn btn-info" asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
